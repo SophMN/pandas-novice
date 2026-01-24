@@ -1,29 +1,43 @@
-##Creating, reading and writing
+#Topic 1: Reading and writing files with Python
+##Reading from a file
+my_file = open("dna.txt")
+my_file_content = my_file.read()
 
-#Import pandas library
-import pandas as pd
+#Calculate the length
+dna_len = len(my_file_content)
+print("My DNA sequence has " + str(dna_len) + " nucleotides")
 
-#Create a pandas DataFrame
-pd.DataFrame({'Yes': [20, 21], 'No': [130, 3]})
+##Opening files for writing
+my_file = open("dna.txt", "w")
+my_file.write("DNA sequence")
+my_file.close
 
-pd.DataFrame({'Bob': ['Disagree', 'Neutral'], 
-              'Sue': ['Strongly agree', 'Agree']})
+#Topic 2: Lists and loops
+#Creating and manipulating a list
+apes = ["Gorilla gorilla", "Pan troglodytes", "Homo sapiens"]
+birds = ["Nectarinia famosa", "Merops nubicus", "Ploceus castaneiceps", "Halcyon leucocephala"]
+apes[0] #Accessing an element within a list
+birds[3]
+birds[2:4]
+apes[-1] #Accessing the last element in a list
+apes[0:3] #Slicing
 
-#Adding row labels using the index parameter
-pd.DataFrame({'Bob': ['Disagree', 'Neutral'], 
-              'Sue': ['Strongly agree', 'Agree']}, 
-              index = ['Question1', 'Question2'])
+#Using the index method to access a specific list element
+chimp_index = apes.index("Pan troglodytes")
+print(chimp_index)
 
-#Pandas Series
-pd.Series([30, 35, 40], index = ['2015 sales', '2016 sales', '2017 sales'], 
-name = 'ProductA')
+#Appending items to a list
+apes.append("Pan paniscus")
+print(apes)
 
-#Reading data
-ebola_data = pd.read_csv("ebola_data_db_format.csv")
+#Concatenating 2 lists
+fauna = apes + birds
+print(fauna)
 
-#Get the dimensions of the data
-ebola_data.shape
+#Reversing the order of a list
+birds.reverse()
+print(birds)
 
-#Get the first and last 5 entries of the dataset
-ebola_data.head()
-ebola_data.tail()
+#Sorting a list in alphabetical order
+birds.sort()
+print(birds)
