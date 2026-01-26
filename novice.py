@@ -92,3 +92,4 @@ def get_at_content(dna):
 print(get_at_content(dna))
 seq = "atgcatgttccggcctataggat"
 print(get_at_content(seq))
+
