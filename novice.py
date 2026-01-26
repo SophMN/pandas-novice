@@ -71,3 +71,24 @@ for number in range(6):
 #Using a range with a difference
 for numbers in range(2, 14, 4):
     print(numbers)
+
+##Defining functions in Python
+def get_at_content(dna):
+    length = len(dna)
+    a_count = dna.count('A')
+    t_count = dna.count('T')
+    at_content = (a_count + t_count) / length
+    return at_content
+dna = "TACGGTAGCGCTACAGCGT"
+print(get_at_content(dna))
+
+#Improve the function to also execute lowercase input sequences and round off the output to 2dp
+def get_at_content(dna):
+    length = len(dna)
+    a_count = dna.upper().count('A')
+    t_count = dna.upper().count('T')
+    at_content = (a_count + t_count) / length
+    return round(at_content, 2)
+print(get_at_content(dna))
+seq = "atgcatgttccggcctataggat"
+print(get_at_content(seq))
