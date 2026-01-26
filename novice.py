@@ -110,3 +110,6 @@ for accession in accs:
     if accession.startswith('a'):
         print(accession)
 
+##Using assertion to check whether your function is working appropriately
+assert get_at_content(dna) == 0.42
+assert get_at_content(dna) == 0.2
