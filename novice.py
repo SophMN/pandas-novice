@@ -63,3 +63,11 @@ species_split = species_names.split(",")
 print(species_split)
 species_split2 = species_names.split(" ")
 print(species_split2)
+
+#Using a range in a loop
+for number in range(6):
+    print(number)
+
+#Using a range with a difference
+for numbers in range(2, 14, 4):
+    print(numbers)
