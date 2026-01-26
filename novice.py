@@ -93,3 +93,20 @@ print(get_at_content(dna))
 seq = "atgcatgttccggcctataggat"
 print(get_at_content(seq))
 
+##Conditional statements: if and ifelse
+expression_level = 125
+if expression_level > 100:
+    print("The gene is highly expressed")
+
+#Ifelse statement
+exp = 37
+if exp > 100:
+    print("The gene is highly expressed")
+else:
+    print("The gene is lowly expressed")
+
+accs = ['ab56', 'bh84', 'hv76', 'ay93', 'ap97', 'bd72']
+for accession in accs:
+    if accession.startswith('a'):
+        print(accession)
+
